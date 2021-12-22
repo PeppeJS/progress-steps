@@ -11,13 +11,13 @@
 
 body {
   display: flex;
-  font-family: 'Muli', sans-serif;
   justify-content: center;
   align-items: center;
+  margin: 0;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
-  background-color: rgb(243, 201, 147);
+  background-color: grey;
+  font-family: 'roboto', sans-serif;
 }
 
 .container {
@@ -27,10 +27,10 @@ body {
 .progress-container {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  margin-bottom: 25px;
   max-width: 100%;
-  margin-bottom: 30px;
   width: 350px;
+  position: relative;
 }
 
 .progress-container::before {
@@ -39,9 +39,9 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
+  width: 100%;
   transform: translateY(-50%);
   height: 4px;
-  width: 100%;
   z-index: -1;
 }
 
@@ -50,24 +50,24 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
+  width: 0%;
   transform: translateY(-50%);
   height: 4px;
-  width: 0%;
   z-index: -1;
   transition: 1s ease;
 }
 
 .circle {
-  background-color: white;
   border-radius: 50%;
+  background-color: white;
   width: 30px;
   height: 30px;
-  display: flex;
   font-size: 18px;
   font-weight: bold;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--line--empty);
+  border: 1px solid var(--line--empty);
 }
 
 .circle.active {
@@ -75,14 +75,14 @@ body {
 }
 
 .btn {
-  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
   padding: 8px 28px;
-  border-radius: 8px;
+  margin-right: 6px;
   font-size: 15px;
   font-weight: bold;
-  border: none;
-  background-color: var(--line--blue);
   color: white;
+  background-color: var(--line--blue);
   cursor: pointer;
 }
 
@@ -91,10 +91,10 @@ body {
 }
 
 .btn:disabled {
-  background-color: var(--line--empty);
   cursor: not-allowed;
+  background-color: var(--line--empty);
 }
 
 .btn:focus {
-  outline: 0;
+  outline: none;
 }
